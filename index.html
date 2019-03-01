@@ -1,0 +1,1123 @@
+<html>
+<head>
+<meta name="theme-color" content="#FF9900">
+<link rel="icon" href="../../pictures/favicon.ico">
+<title>Teoremas del final de Análisis II (c)</title>
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<style>
+.c1{
+color:orange;
+font-weight: bold;
+}
+
+.c1f{
+color:orange;
+}
+.c2{
+color:#9900FF;
+font-weight: bold;
+}
+.c2f{
+color:#9900FF;
+}
+.c3{
+color:red;
+font-weight: bold;
+}
+.c4{
+color:#009900;
+font-weight: bold;
+}
+.c5{
+color:#FF66CC;
+font-weight: bold;
+}
+.c6{
+color:#0099FF;
+font-weight: bold;
+}
+ul ul {
+list-style-image: url('listItemSub.png');
+margin:0px;
+}
+ul {
+padding:0px;
+padding-left:2em;
+margin:0px;
+list-style-image: url('listItem.png');
+}
+
+.demo {
+list-style-image: url('listItemSubSub.png');
+}
+
+.demo li{
+margin-top:5px; margin-bottom:5px;
+}
+
+img{
+max-width:100%;
+}
+
+.imgteo{
+border:2px solid #FFCC00;
+max-width:100%;
+}
+
+h3{
+font-size: 1.2em;
+padding:0px;
+margin:0px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<meta charset="utf-8">
+</head>
+<body>
+<div class = "container" style="max-width:60em;">
+
+<!-- boton home -->
+<a href="../..">
+<div class="area_botton_superior">
+🏠 Home
+</div>
+</a>
+
+<!-- boton home -->
+<a href="#indice">
+<div class="area_botton_superior_alt">
+📋 Índice
+</div>
+</a>
+
+
+<!-- Website title -->
+<div class="area_titulo" style="max-width:25em">
+Teoremas para el final de Análisis II
+</div>
+
+<!--<center style="float:right"><a href="https://www.lartu.net" style="color:white;">Home →</a></center>
+
+<!-- Website title
+<div class="area_titulo" style="max-width:20em;">
+<span class="title">Teoremas para el final de Análisis II</span>
+</div>-->
+
+<!-- introducción -->
+<div class="area_contenido">
+¡Hola! Este es un compilado de los <b>19 teoremas en general tomados en los finales de Análisis II (c)</b>, basado en las dos listas de teoremas que circulan por ahí. Intento que sea lo más comprensible y completo posible, pero no puedo hacerme responsable si algún teorema no presente acá es tomado en un final. No debiera pasar, pero quién sabe. Desde ya, espero que a quien esté leyendo esto le sirva de algo. Si llegase a encontrar un error, favor de contactarse conmigo por alguno de los medios explicitados en el <a href="https://www.lartu.net">home</a> de este sitio. La mayoría de las demostraciones aquí presentes fueron tomadas del <a href="larotondum.pdf">Cálculo de Larotonda</a> o de apuntes tomados en clase.
+<br><br><b>Sugerencia:</b> Todas las demostraciones del sitio fueron escritas con <a href="../gallemathic">Gallemathic</a>. A mí me ayudó un montón a la hora de estudiar estos teoremas y escribirlos y escribirlos y escribirlos hasta saberlos de memoria, así que si les da fiaca andar escribiendo a mano o por un medio más tradicional, denle una oportunidad <i>(shameless plug)</i>.
+<!--<br><br>Esta página también está disponible para descargar en PDF: <a href="Teoremas del final de Análisis II (c).pdf">Teoremas del final de Análisis II (c).pdf</a>.-->
+<br><br><b>Descargas:</b> Antes esta página podía descargarse como PDF. Ahora mismo habría que imprimirla a un PDF y subirlo, pero no estoy logrando que lo haga bien y el viejo estaba muy desactualizado. En los próximos días iré subiendo una versión nueva (13/9/18).
+<br><br><b>Nota:</b> El presente sitio se encuentra constantemente en desarrollo, es posible que algunos teoremas tengan detalles de estilo de los cuales otros carezcan. A su debido tiempo iré mejorando todo para que la lectura y comprensión de los temas sea más amena.
+</div>
+
+<!-- novedades titulo -->
+<div class="area_subtitulo">
+Novedades
+</div>
+
+<!-- novedades contenido -->
+<div class="area_entrada">
+14 de agosto del 2018:
+<br>Comencé a pasar los teoremas a un nuevo formato. La página también está cambiando, así que si llegan a ver algo que todavía está sin cambiar, no se alarmen. Pronto va a ponerse como el resto del contenido.
+</div>
+
+<!-- indice titulo -->
+<!--<div class="area_subtitulo" style="background:#7f0f2f">
+Ads
+</div>-->
+<!-- Entry ads -->
+<!--<div class="area_entrada">
+<center>Sí, bueno, Ads para mantener el sitio corriendo. ¡Les agradecería si apagaran Adblock por un ratito! <span style="font-size:0.5em">Pero bueno, nadie los obliga a hacerlo.</span> <br><b>¡Ojo con hacerles click igual, que no están asociados conmigo ni nada y pueden llevarlos a cualquier parte!</b>
+<script type="text/javascript" src="//ylx-1.com/bnr.php?section=General&pub=341236&format=728x90&ga=g"></script>
+<noscript><a href="https://yllix.com/publishers/341236" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png" style="border:none;margin:0;padding:0;vertical-align:baseline;" /></a></noscript></center>
+</div>-->
+
+<!-- indice titulo -->
+<div class="area_subtitulo" id="indice">
+Índice
+</div>
+
+<!-- indice contenido -->
+<div class="area_entrada">
+<a href="#teo1"><b>Teorema 1</b></a>
+<br> 🔸 Dificultad: 🔴🔴⚫️⚫️⚫️
+<br> 🔸 Sea f: A ⊆ ℝⁿ → ℝᵐ, P ∈ A⁰, L ∈ ℝᵐ. Entonces vale que: (f es continua en P) ⇔ (∀ sucesión Tn (n ∈ ℕ) de puntos de A ⁄ Tn → P, f(Tn) → f(P)).
+</div>
+<div class="area_entrada">
+<a href="#teo2"><b>Teorema 2</b></a>
+<br> 🔸 Dificultad: 🔴🔴⚫️⚫️⚫️
+<br> 🔸 <i>Teorema de Bolzano:</i> sea f: A ⊆ ℝ → ℝ una función continua. Si existen puntos P ∈ A y Q ∈ A tales que f(P)f(Q) &lt; 0, entonces existe un punto c ∈ A ⁄ f(c) = 0.
+</div>
+<div class="area_entrada">
+<a href="#teo3"><b>Teorema 3</b></a>
+<br> 🔸 Dificultad: 🔴⚫️⚫️⚫️⚫️
+<br> 🔸 <i>Teorema de Bolzano en ℝⁿ</i>: sea f: A ⊆ ℝⁿ → ℝ, con A arcoconexo y f continua en A. Si existen P y Q ∈ A ⁄ f(P)f(Q) &lt; 0, entonces existe R ∈ A ⁄ f(R) = 0.
+</div>
+<div class="area_entrada">
+<a href="#teo4"><b>Teorema 4</b></a>
+<br> 🔸 Dificultad: 🔴🔴🔴⚫️⚫️
+<br> 🔸 <i>Teorema de Weierstrass</i>: sea f: A ⊆ ℝⁿ → ℝ, con A compacto, f continua en A. Entonces existen m y M ∈ ℝ tales que m ≤ f(x) ≤ M ∀ x ∈ A. Además existen Pm y PM ∈ A tales que f alcanza su mínimo y máximo respectivos en A en dichos puntos.
+</div>
+<div class="area_entrada">
+<a href="#teo5"><b>Teorema 5</b></a>
+<br> 🔸 Dificultad: 🔴⚫️⚫️⚫️⚫️
+<br> 🔸 <i>Diferenciable ⇒ Continua</i>: sea f: A ⊆ ℝⁿ → ℝ, P ∈ A⁰, y f diferenciable en P. Entonces f es continua en P.
+</div>
+<div class="area_entrada">
+<a href="#teo6"><b>Teorema 6</b></a>
+<br> 🔸 Dificultad: 🔴🔴🔴⚫️⚫️
+<br> 🔸 <i>Sobre la existencia de las derivadas direccionales y la unicidad del diferencial</i>: sea f:A ⊆ ℝⁿ → ℝ. Sea p ∈ A⁰. Si existe una transformación lineal Tp tal que lim x → p ‖f(x) − f(p) − Tp(x − p)‖ ⁄ ‖x − p‖ = 0, entonces existen todas las derivadas direccionales de f en p, y su fórmula es Tp(v), con v un versor de Rⁿ; Tp(X) = Dfp(X) = &lt;∇f(p), X> para todo X ∈ ℝⁿ y f es diferenciable en P; y la transformación lineal Tp es única.
+</div>
+<div class="area_entrada">
+<a href="#teo7"><b>Teorema 7</b></a>
+<br> 🔸 Dificultad: 🔴⚫️⚫️⚫️⚫️
+<br> 🔸 <i>∇f(p) es la dirección de máximo crecimiento de f en p</i>: sea f una función diferenciable en p. Entonces la dirección de máximo crecimiento de f en p viene dada por ∇f(p).
+</div>
+<div class="area_entrada">
+<a href="#teo8"><b>Teorema 8</b></a>
+<br> 🔸 Dificultad: 🔴🔴🔴⚫️⚫️
+<br> 🔸 Teoremas de <i>Fermat</i>, <i>Rolle</i>, <i>Lagrange</i> y <i>Cauchy</i> en ℝ.</ul>
+</div>
+<div class="area_entrada">
+<a href="#teo9"><b>Teorema 9</b></a>
+<br> 🔸 Dificultad: 🔴🔴⚫️⚫️⚫️
+<br> 🔸 <i>C¹ ⇒ Diferenciable</i>: En formato imagen.
+</div>
+<div class="area_entrada">
+<a href="#teo10"><b>Teorema 10</b></a>
+<br> 🔸 Dificultad: 🔴🔴🔴🔴⚫️
+<br> 🔸 <i>Teorema del Hessiano</i>: Sea f: A ⊆ ℝⁿ → ℝ, f una función de clase C³ en A, con A abierto, P ∈ A un punto de A tal que ∇f(P) = 0. Entonces si el Hessiano de f en P (Hf(P)) es definido negativo, P es un máximo estricto de f. Si Hf(P) es definido positivo, P es un mínimo estricto de f. Si Hf(P) es indefinido, entonces P es un punto silla de f.
+</div>
+<div class="area_entrada">
+<a href="#teo11"><b>Teorema 11</b></a>
+<br> 🔸 Dificultad: 🔴🔴🔴🔴🔴
+<br> 🔸 <i>Teorema de los multiplicadores de Lagrange</i>: En formato imagen.
+</div>
+<div class="area_entrada">
+<a href="#teo12"><b>Teorema 12</b></a>
+<br> 🔸 Dificultad: 🔴🔴🔴⚫️⚫️
+<br> 🔸 <i>Continua ⇒ Integrable</i>: En formato imagen.
+</div>
+<div class="area_entrada">
+<a href="#teo13"><b>Teorema 13</b></a>
+<br> 🔸 Dificultad: 🔴🔴🔴🔴⚫️
+<br> 🔸 <i>Teorema fundamental del cálculo integral:</i> Sea f:[a,b]→ℝ una función continua. Dado x∈[a,b] sea F:[a,b]→ℝ tal que F(x)=∫[a,x]f=∫[a,x]f(t)dt. Entonces F es continua en [a,b], derivable en (a,b) y ∀x∈[a,b] vale que F'(x)=f(x).</li>
+</div>
+<div class="area_entrada">
+<a href="#teo14"><b>Teorema 14</b></a>
+<br> 🔸 Dificultad: 🔴⚫️⚫️⚫️⚫️
+<br> 🔸 <i>Regla de Barrow</i>: sea f una función continua en un cerrado [a, b]. Si F es una primitiva de f, se tiene que ∫[a, b]f = F(b) − F(a).
+</div>
+<div class="area_entrada">
+<a href="#teo15"><b>Teorema 15</b></a>
+<br> 🔸 Dificultad: 🔴⚫️⚫️⚫️⚫️
+<br> 🔸 <i>Teorema del valor medio integral</i>: sea f: [a, b] → ℝ una función continua. Entonces ∃ c ∈ (a, b) ⁄ ∫[a, b]f = f(c)(b − a).
+</div>
+<div class="area_entrada">
+<a href="#teo16"><b>Teorema 16</b></a>
+<br> 🔸 Dificultad: 🔴🔴⚫️⚫️⚫️
+<br> 🔸 Dado P en una curva de nivel de F(x, y) de clase C¹ tal que ∇F(P)≠0, entonces ∇F(P) es perpendicular a la recta tangente a la curva en P. En formato imagen.
+</div>
+<div class="area_entrada">
+<a href="#teo17"><b>Teorema 17</b></a>
+<br> 🔸 Dificultad: 🔴🔴🔴🔴🔴
+<br> 🔸 <i>Las derivadas cruzadas coinciden</i>.
+</div>
+<div class="area_entrada">
+<a href="#teo18"><b>Teorema 18</b></a>
+<br> 🔸 Dificultad: 🔴🔴⚫️⚫️⚫️
+<br> 🔸 <i>Teorema de Lagrange en ℝⁿ o Teorema del valor medio para funciones diferenciables</i>: En formato imagen.
+</div>
+<div class="area_entrada">
+<a href="#teo19"><b>Teorema 19</b></a>
+<br> 🔸 Dificultad: 🔴🔴⚫️⚫️⚫️
+<br> 🔸 <i>Teorema de Fermat en ℝⁿ</i>: En formato imagen.
+</div>
+
+
+
+<!-- TEOREMA DE LAS SUCESIONES -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo1">
+Teorema 1
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sean:</b>
+<ul>
+<li><span class="c4">f</span>: A ⊆ ℝⁿ  →  ℝᵐ</li>
+<li><span class="c2">P</span> ∈ A⁰</li>
+<!--<li><span class="c5">L</span> ∈ ℝᵐ</li>-->
+</ul>
+<br><b>Entonces vale que:</b>
+<ul>
+<li><span style="color:orange">(f es continua en P)</span> ⇔ <span style="color:red">(∀ sucesión Tn (n ∈ ℕ) de puntos de A  tal que Tn → P, se cumple que f(Tn) → f(P))</span></li>
+</ul>
+</b>
+
+<br><b>Demostración:</b>
+
+<br><b>(<span style="color:orange">1</span> ⇒ <span style="color:red">2</span>)</b>
+<ul class="demo">
+<li>Si <span class="c4">f</span> es continua en <span class="c2">P</span>, entonces vale que ∀ ε &gt; 0 ∃ δ &gt; 0  ⁄  ‖x − <span class="c2">P</span>‖ &lt; δ ⇒ ‖<span class="c4">f</span>(x) − <span class="c4">f</span>(<span class="c2">P</span>)‖ &lt; ε, es decir que puedo hacer la distancia de <span class="c4">f</span>(x) a <span class="c4">f</span>(<span class="c2">P</span>) tan chica como yo quiera acercando x a <span class="c2">P</span>.
+<li>Sea <span class="c6">Tn</span> una sucesión de puntos de A, con n ∈ ℕ tal que <span class="c6">Tn</span> → <span class="c2">P</span>.
+<ul>
+<li>Esto implica que existe un nₒ a partir del cual <span class="c6">Tn</span> está suficientemente cerca de <span class="c2">P</span>.
+<li>Es decir, ∀ ε' > 0 ∃ nₒ ∈ ℕ ⁄ n > nₒ ⇒ ‖<span class="c6">Tn</span> − <span class="c2">P</span>‖ &lt; ε'.
+</ul>
+<li>Ahora, que <span class="c4">f</span> sea continua implica que puedo tomar cualquier ε y para ese ε existir un δ.
+<li>Que <span class="c6">Tn</span> → <span class="c2">P</span> implica que siempre existe un nₒ a partir del cual <span class="c6">Tn</span> está a una distancia ε' o menor de <span class="c2">P</span>.
+<li>Usando los dos últimos puntos, si tomo δ = ε' puedo decir lo siguiente: ∀ ε > 0 ∃ δ  ⁄  ‖<span class="c6">Tn</span> − <span class="c2">P</span>‖ &lt; δ ⇒ ‖<span class="c4">f</span>(<span class="c6">Tn</span>) − f(<span class="c2">P</span>)‖ &lt; ε.
+</ul>
+
+<br><b>(<span style="color:red">2</span> ⇒ <span style="color:orange">1</span>)</b>
+<ul class="demo">
+<li>Supongamos que <span class="c4">f</span> no es continua en <span class="c2">P</span>.
+<ul>
+<li>Entonces esto significa que  ∃ ε &gt; 0 ⁄ ∀ δ &gt; 0 ∃ x ∈ A  ⁄  ‖x − <span class="c2">P</span>‖ &lt; δ ∧ ‖<span class="c4">f</span>(x) − <span class="c4">f</span>(<span class="c2">P</span>)‖ &gt; ε.
+</ul>
+<li>Ahora, como para toda sucesión <span class="c6">Tn</span> → <span class="c2">P</span> vale que <span class="c4">f</span>(<span class="c6">Tn</span>) → <span class="c4">f</span>(<span class="c2">P</span>), entonces esto significa que ∀ ε > 0 ∃ δ > 0 ⁄ (‖<span class="c6">Tn</span> − <span class="c2">P</span>‖ &lt; δ ⇒ ‖<span class="c4">f</span>(<span class="c6">Tn</span>) − <span class="c4">f</span>(<span class="c2">P</span>)‖ &lt; ε).
+<li>Como <span class="c4">f</span> no es continua, se puede tomar una sucesión de deltas δi = (1 ⁄ i) con i ∈ ℕ, tal que (∀ δi > 0, ∃ ε' &gt; 0  ∧ ∃ xi ∈ A)  ⁄  (‖xi − <span class="c2">P</span>‖ &lt; δi ∧ ‖<span class="c4">f</span>(xi) − <span class="c4">f</span>(<span class="c2">P</span>)‖ &gt; ε').
+<li>Como i → ∞ ⇒ δi → 0, y ‖xi − <span class="c2">P</span>‖ &lt; δi, entonces se deduce que xi → <span class="c2">P</span>.
+<li>Como xi es una sucesión de puntos de A que tiende a <span class="c2">P</span>, entonces necesariamente <span class="c4">f</span>(xi) → <span class="c4">f</span>(<span class="c2">P</span>).
+<ul>
+<li>Esto significa que (∀ ε > 0 ∃ δ > 0) ⁄ (‖xi − <span class="c2">P</span>‖ &lt; δ ⇒ ‖<span class="c4">f</span>(xi) − <span class="c4">f</span>(<span class="c2">P</span>)‖ &lt; ε).</li>
+</ul>
+<li>Ahora, si yo tomo ε = ε' llegamos a un absurdo, pues habíamos dicho que ‖<span class="c4">f</span>(xi) − <span class="c4">f</span>(<span class="c2">P</span>)‖ &gt; ε'.
+<li>Ha de ser entonce que <span class="c4">f</span> es continua en <span class="c2">P</span>.
+</ul>
+
+<br>Como <span class="c1">1</span> ⇒ <span class="c3">2</span> ∧ <span class="c3">2</span> ⇒ <span class="c1">1</span>, entonces <span class="c1">1</span> ⇔ <span class="c3">2</span>, que es lo que queríamos probar. □
+</div>
+
+
+
+<!-- TEOREMA DE BOLZANO -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo2" style="max-width:20em;">
+Teorema 2: Teorema de Bolzano
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sean:</b>
+<ul>
+<li>Sea A el intervalo [<span class = "c1">P</span>, <span class = "c2">Q</span>] ⊆ ℝ</li>
+<li><span class="c4">f</span>: A → ℝ una función continua</li>
+<li>Dos puntos <span class = "c1">P</span> ∈ A y <span class = "c2">Q</span> ∈ A tales que <span class="c4">f</span>(<span class = "c1">P</span>)<span class="c4">f</span>(<span class = "c2">Q</span>) &lt; 0</li>
+</ul>
+<br>
+<b>Entonces:</b>
+<ul>
+<li>Existe un punto <span class = "c3">c</span> ∈ A  ⁄  <span class="c4">f</span>(<span class = "c3">c</span>) = 0</li>
+</ul>
+</b>
+<br>
+<b>Demostración</b>:
+<ul class="demo">
+<li>Supongamos que <span class="c4">f</span>(<span class = "c1">P</span>) &gt; 0 y <span class="c4">f</span>(<span class = "c2">Q</span>) &lt; 0. El caso inverso es análogo.
+<li>Sea <span class="c5">S</span> entonces el conjunto de los x ∈ A  ⁄  <span class="c4">f</span>(x) &gt; 0.
+<ul><li><span class="c5">S</span> ≠ ∅ porque al menos <span class = "c1">P</span> ∈ S.
+<li>Además, <span class="c5">S</span> está acotado superiormente al menos por <span class = "c2">Q</span>, por lo que tiene un supremo <span class="c6">s</span> (notar la diferencia entre <span class="c5">S</span> y <span class="c6">s</span>).
+</ul>
+<li>Como <span class="c5">S</span> es cerrado y acotado, o sea que <span class="c5">S</span> ⊆ [<span class = "c1">P</span>, <span class="c6">s</span>], puedo extraer una subsucesión creciente <b>Sn</b> de puntos de <span class="c5">S</span> que tienda al supremo.
+<li><b>Sn</b> → <span class="c6">s</span>. Ahora hay dos posibilidades, <span class="c4">f</span>(<span class="c6">s</span>) > 0 o <span class="c4">f</span>(<span class="c6">s</span>) = 0.
+
+<ul><li>Si <span class="c4">f</span>(<span class="c6">s</span>) > 0, entonces existe un entorno (<span class="c6">s</span> − ε, <span class="c6">s</span> + ε)∩[<span class = "c1">P</span>, <span class="c6">s</span>] tal que <span class="c4">f</span>(x) &gt; 0 ∀ x perteneciente a ese intervalo.
+<li>Como <span class="c6">s</span> &lt; <span class = "c2">Q</span>, ya que <span class="c4">f</span>(<span class = "c2">Q</span>) &lt; 0, entonces puedo tomar xₒ ∈ (<span class="c6">s</span>, <span class="c6">s</span> + ε) tal que <span class="c4">f</span>(xₒ) &gt; 0.
+<li>Pero entonces xₒ ∈ <span class="c5">S</span> y xₒ &gt; <span class="c6">s</span>, lo que es absurdo pues <span class="c6">s</span> es el supremo del conjunto.
+</ul>
+
+<li>Debe ser entonces que <span class="c4">f</span>(<span class="c6">s</span>) = 0.
+<li>Tomando <span class = "c3">c</span> = <span class="c6">s</span> se demuestra el teorema. □
+</ul>
+<br><i style="font-size:0.8em">(Aprovecho para agredecer a Tony Luciana y a Fernando Martin por señalar y corregir errores presentes en esta demostración).</i>
+</div>
+
+
+
+<!-- TEOREMA DE BOLZANO EN R^N -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo3" style="max-width:23em;">
+Teorema 3: Teorema de Bolzano en Rⁿ
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sean:</b>
+<ul>
+<li>A ⊆ ℝⁿ arcoconexo
+<li>f: A ⊆ ℝⁿ → ℝ
+<li>f continua en A
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>Si existen P, Q ∈ A  ⁄  f(P)f(Q) &lt; 0, entonces existe R ∈ A ⁄ f(R) = 0
+</ul>
+</b>
+
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Por ser A arcoconexo puedo definir una curva α(t):[0,1] → A   ⁄  α(0) = P y α(1) = Q.
+<ul>
+<li>Arcoconexo significa que dados dos puntos pertenecientes al conjunto, existe alguna curva de puntos del conjunto mediante la cual los puedo unir.
+</ul>
+<li>Considero entonces una función G(t) = f∘α(t)
+<ul>
+<li>G es continua por composición de continuas.
+<li>G cumple que G(0) = f(P) y G(1) = f(Q).
+</ul>
+<li>Como G es continua en [0, 1] entonces G(0)G(1) &lt; 0.
+<li>Partiendo del punto anterior, existe c ∈ (0, 1)  ⁄  G(c) = 0 por el <a href="#teo2">Teorema de Bolzano en ℝ</a>.
+<ul>
+<li>Es decir que G(c) = f∘α(c) = f(α(c)) = 0.
+</ul>
+<li>Si tomamos R = α(c) se demuestra el teorema □
+</ul>
+</div>
+
+
+
+<!-- TEOREMA DE WEIERSTRASS -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo4" style="max-width:22em;">
+Teorema 4: Teorema de Weierstrass
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sean:</b>
+<ul>
+<li>A ⊆ ℝⁿ compacto
+<li>f: A ⊆ ℝⁿ → ℝ
+<li>f continua en A
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>Existen m y M ∈ ℝ tales que m ≤ f(x) ≤ M ∀ x ∈ A.
+<li>Existen Pm y PM ∈ A tales que f alcanza su mínimo y máximo respectivos en A en dichos puntos.
+</ul>
+</b>
+
+<br><b>Demostración:</b>
+<br><b>(Existencia de m y M)</b><br>
+<ul class="demo">
+<li>Veamos el caso de M, el de m es análogo. Supongamos que f no está acotada superiormente.
+<ul>
+<li>Entonces no existe M ∈ ℝ tal que M > f(x) ∀ x ∈ A.
+<li>Por lo tanto debe existir una sucesión de puntos An de A tal que f(An) ≥ n ∀n ∈ ℕ.
+</ul>
+<li>Por ser A compacto, existe una subsucesión convergente de An que tiende a P ∈ A, sea esta subsucesión Ank.
+<li>Por lo dicho anteriormente, se cumple que f(Ank) ≥ nk ∀ nk ∈ ℕ.
+<ul>
+<li>Como f es continua en A, f es continua en el punto P.
+<li>Se ve que es imposible que f(Ank → P) ≥ nk ∀ nk ∈ ℕ, porque que f es continua P y no diverge ni pega saltos en P, por lo que eventualmente nk será mayor a f(P).
+<li>Por lo tanto, f debe estar acotada superiormente.
+</ul>
+<li>Entonces existe M ∈ ℝ tal que M > f(x) ∀ x ∈ A.
+</ul>
+<br><b>(Pm y PM)</b><br>
+<ul class="demo">
+<li>Ahora quiero ver que f alcanza su máximo y su mínimo en A. Veamos el caso de PM, en donde alcanza su máximo, el otro es análogo.
+<li>Por el punto anterior, sé que Img(f) ⊆ [m, M], por lo que tiene un supremo: s.
+<ul>
+<li>Quiero ver que s es en realidad un máximo.
+</ul>
+<li>Tomo una sucesión creciente de puntos de Img(f) que tienda al supremo. <li>Como esta sucesión existe, puedo tomar una sucesión An de puntos de A tal que lim n → ∞ f(An) = s.
+<ul>
+<li>De esta sucesión extraigo una subsucesión convergente Ank.
+<li>Al límite de Ank lo llamo PM, de forma que lim nk → ∞ Ank = PM.
+</ul>
+<li>Como A es un conjunto compacto, PM ∈ A.
+<li>Como f es continua en PM, entonces f(PM) = lim n → ∞f(Ank) = s.
+<li>Por lo tanto f alcanza su máximo en A.
+</ul>
+<br>Dicho todo esto queda demostrado el teorema. □
+</div>
+
+
+
+<!-- DIFERENCIABLE IMPLICA CONTINUA -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo5" style="max-width:22em;">
+Teorema 5: Diferenciable ⇒ Continua
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sean:</b>
+<ul>
+<li>f: A ⊆ ℝⁿ → ℝ
+<li>P ∈ A⁰
+<li>f diferenciable en P
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>f es continua en P
+</ul>
+</b>
+
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Partimos de la siguiente obviedad: 0 ≤ ‖f(x) − f(P)‖, ∀ x ∈ A.
+<li>‖f(x) − f(P)‖ = ‖f(x) − f(P) − Df(P)(x − P) + Df(P)(x − P)‖
+<li>‖f(x) − f(P) − Df(P) + Df(P)(x − P)‖ ≤ ‖f(x) − f(P) − Df(P)(x − P)‖ + ‖Df(P)(x − P)‖
+<ul>
+<li>Porque ‖a + b‖ ≤ ‖a‖ + ‖b‖ <i>(desigualdad triangular).</i>
+</ul>
+<li>Df(P)(x	− P) = &lt;∇f(P), (x − P)&gt; que, por desigualdad de Cauchy-Schwartz, es menor a ‖∇f(P)‖ ⋅ ‖x − P‖.
+<li>Juntando todo lo que teníamos hasta ahora, nos queda que:
+<ul>
+<li>0 ≤ ‖f(x) − f(P)‖ = ‖f(x) − f(P) − Df(P) + Df(P)(x − P)‖
+<li>≤ ‖f(x) − f(P) − Df(P)(x − P)‖ + ‖Df(P)(x−P)‖
+<li>≤ ‖f(x) − f(P) − Df(P)(x − P)‖ + ‖∇f(P)‖ ⋅ ‖x − P‖
+<li>Entonces 0 ≤ ‖f(x) − f(P)‖ ≤ ‖f(x) − f(P) − Df(P)(x − P)‖ + ‖∇f(P)‖ ⋅ ‖x − P‖
+</ul>
+<li>Ahora, multiplicamos y dividimos al primer término por ‖x − P‖.
+<li>Nos queda que: ‖f(x) − f(P) − Df(P)(x − P)‖ + ‖∇f(P)‖ ⋅ ‖x−P‖ = (‖f(x) − f(P) − Df(P)(x − P)‖ ⁄ ‖x − P‖) ⋅ ‖x − P‖ + ‖∇f(P)‖ ⋅ ‖x − P‖
+<li>Si se fijan, ‖f(x)−f(P)−Df(P)(x−P)‖ ⁄ ‖x−P‖ es la definición del diferencial de f en P, por lo que tiende a 0.
+<ul>
+<li>El diferencial de f en P (Df(P)) tiende a 0 cuando x → P ⇔ f es diferenciable.
+</ul>
+<li>El segundo término, ‖∇f(P)‖ ⋅ ‖x − P‖, trivialmente tiende a 0 cuando x → P.
+<li>Por lo que ambos términos tienden a 0 y suman 0.
+<ul>
+<li>Por lo tanto, ‖f(x) − f(P) − Df(P)(x − P)‖ + ‖∇f(P)‖ ⋅ ‖x − P‖ tiende a 0 cuando x → P.
+</ul>
+<li>Juntando todo lo que conseguimos, 0 ≤ ‖f(x) − f(P)‖ ≤ 0.
+<ul>
+<li>Por lo tanto f(x) → f(P) cuando x → P.
+<li>Esto hace que f sea continua en P.
+</ul>
+<li>Llegamos a que f es continua en P, que es lo que queríamos probar. □
+</ul>
+</div>
+
+
+
+<!-- DERIVADAS DIRECCIONALES Y UNICIDAD DEL DIFERENCIAL -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo6" style="max-width:35em;">
+Teorema 6: derivadas direccionales y unicidad del diferencial
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sean:</b>
+<ul>
+<li>f: A ⊆ ℝⁿ → ℝ
+<li>Sea p ∈ A⁰
+<li>Tp transformación lineal tal que lim x → p (‖f(x) − f(p) − Tp(x − p)‖ ⁄ ‖x − p‖) = 0
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>La fórmula de las derivadas direccionales de f en p es Tp(v), con v un versor de Rⁿ.
+<li>Existen todas las derivadas direccionales de f en p.
+<li>f es diferenciable en p.
+<li>Tp(X) = Dfp(X) = &lt;∇f(p), X> para todo X ∈ ℝⁿ.
+<li>La transformación lineal Tp es única.
+</ul>
+</b>
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Si ‖f(x) − f(p) − Tp(x − p)‖ ⁄ ‖x − p‖ tiende a 0 cuando x  → p, entonces lo hace por cualquier curva por la que x tienda a p.
+<li>Sea entonces x = p + tV, con V un versor de ℝⁿ.
+<ul>
+<li>Entonces x → p cuando t → 0.
+</ul>
+<li>Reemplazando en la ecuación de arriba me queda que lim t → 0 (‖f(p + tV) − f(p) − Tp(tV)‖ ⁄ ‖tV‖) = 0.
+<li>Como ‖V‖ = 1, entonces eso es igual a lim t → 0 (‖f(p + tV) − f(p) − Tp(tV)‖ ⁄ |t|) = 0.
+<li>Eso es igual a lim t → 0 |(f(p + tV) − f(p)) ⁄ t − Tp(v)| = 0.
+<li>Puede verse entonces que (f(p + tV) − f(p)) ⁄ t = Tp(v).
+<ul>
+<li>Recordemos, lim t → 0 (f(p+tV)−f(p)) ⁄ t es la definición de la derivada en dirección V de f(p).
+<li>Por lo anterior, se deduce que <u>Tp(V) = ∂f ⁄ ∂v(P)</u>.
+<li>Como V puede ser cualquier versor en cualquier dirección, entonces <u>existen todas las derivadas direccionales.</u>
+<li>Esto hace que <u>f sea diferenciable en p</u>.
+</ul>
+<li>Como existen todas las derivadas direccionales para cualquier dirección V, en particular existen para cualquier dirección Ei, con Ei un versor de la base
+canónica.
+<ul>
+<li>Por ejemplo, en R³ los vectores de la base canónica son (1, 0, 0), (0, 1, 0) y (0, 0, 1).
+<li>Todos los vectores de una base canónica tienen norma 1.
+</ul>
+<li>En particular, entonces, existen todas las derivadas parciales de f.
+<ul>
+<li>Las derivadas direccionales que van por la dirección de los vectores de la base canónica.
+</ul>
+<li>Por otro lado, como una transformación lineal se determina por su valor en una
+base canónica de Rⁿ, y como Tp(Ei) = ∂f ⁄ ∂Ei(p), entonces se deduce que <u>&lt;∇f(p), x&gt; = Tp(x) ∀ x ∈ ℝⁿ</u>.
+<li>Finalmente, falta ver que esta transformación lineal es única.
+<li>Sea Sp otra transformación lineal que cumple lo enunciado en la hipótesis. <li>Entonces se deduce que ∂f ⁄ ∂v(p) = Sp(v) para cualquier versor v de ℝⁿ.
+<li>Esto mismo aplica para versores de la base canónica y, por lo tanto, se deduce que Sp(v) = &lt;∇f(p), v&gt;.
+<li>Pero &lt;∇f(p), v&gt; = Tp(v), por lo establecido en los puntos anteriores. <li>Se deduce entonces que Tp = Sp, por lo que <u>Tp es única</u>. □
+</ul>
+</div>
+
+
+
+<!-- DIRECCIÓN DE MÁXIMO CRECIMIENTO -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo7" style="max-width:37em;">
+Teorema 7: ∇f(p) es la dirección de máximo crecimiento de f en p
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sean:</b>
+<ul>
+<li>f una función diferenciable en p.
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>La dirección de máximo crecimiento de f en p viene dada por ∇f(p).
+</ul>
+</b>
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Sea v un versor cualquiera.
+<ul>
+<li>Un versor es un vector de norma unitaria.
+</ul>
+<li>Entonces &lt;∇f(p), v> ≤ |&lt;∇f(p), v>| ≤ ‖∇f(p)‖ ⋅ ‖v‖.
+<li>Como ‖v‖ = 1, entonces &lt;∇f(p), v> ≤ ‖∇f(p)‖.
+<li>Sea ahora v = ∇f(p) ⁄ ‖∇f(p)‖, que es el gradiente de f en p normalizado, un versor con la misma direción que ∇f(p).
+<li>Entonces &lt;∇f(p), v&gt; = &lt;∇f(p), ∇f(p) ⁄ ‖∇f(p)‖&gt; = ‖∇f(p)‖² ⁄ ‖∇f(p)‖ = ‖∇f(p)‖.
+<li>Por lo tanto ∇f(p) es la dirección de mayor crecimiento de f en p. □
+</ul>
+</div>
+
+
+
+<!--ELITE FOUR EN UNA VARIABLE-->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo8" style="max-width:26em;">
+Teorema 8: Fermat, Rolle, Lagrange y Cauchy
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<h3 id="teo8f">Teorema de <span class = "c3">Fermat</span></h3><br>
+<b>Sea:</b>
+<ul>
+<li>f derivable en (a, b)
+<li>p ∈ (a, b) un extremo local de f
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>∇f(p) = 0.
+</ul></b>
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Supongamos que p es un máximo local. Si fuere un mínimo la demostración es análoga.
+<li>Por ser máximo de f, existe un entorno (p − ε, p + ε) de p tal que f(x) ≤ f(p) para cada x perteneciente a dicho entorno.
+<li>Dicho esto, calculemos f'(p) por límites laterales.
+<ul>
+<li>lim t → 0⁺ (f(p + t) − f(p)) ⁄ t ≤ 0
+<li>lim t → 0⁻ (f(p + t) − f(p)) ⁄ t ≥ 0
+</ul>
+<li>Solo puede ser entonces que lim t → 0 (f(p + t) − f(p)) ⁄ t = 0, por lo que f'(p) = 0, que es lo que queríamos probar. □
+</ul>
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<h3 id="teo8r">Teorema de <span class = "c2">Rolle</span></h3><br>
+<b>Sea:</b>
+<ul>
+<li>f continua en [a, b]
+<li>f derivable en (a, b)
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>Si f(a) = f(b), existe c ∈ (a, b) tal que f'(c) = 0.
+</ul></b>
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Si f es una función constante <i>(linea recta horizontal)</i>, entonces trivialmente su derivada es 0 para todo x ∈ (a, b).
+<li>Si f no es constante, entonces necesariamente al menos el máximo o el mínimo del <i>interior</i> se alcanzan en el <i>interior</i>, por <a href="#teo4">teorema de Weierstrass</a>.
+<ul>
+<li>Esto sucede dado que f es continua en un compacto.
+<li>Digo en el interior porque capaz el máximo o el mínimo absolutos de la función son f(a) y f(b).
+<li>Por si hay dudas, el interior de [a, b] es (a, b).
+</ul>
+<li>Sea c dicho mínimo, por <a href="#teo8f">teorema de Fermat</a> f'(c) = 0, que es lo que queríamos probar □
+</ul>
+
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+
+<h3 id="teo8l">Teorema de <span class = "c5">Lagrange</span></h3><br>
+<b>Sea:</b>
+<ul>
+<li>f continua en [a, b]
+<li>f derivable en (a,b)
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>Existe c ∈ (a, b) tal que f'(c) = (f(b) − f(a)) ⁄ (b − a)
+</ul></b>
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Consideremos la siguiente función auxiliar: g(x) = f(x) − L(x), donde L es la recta que une f(b) con f(a), de forma que L(a) = f(a) y L(b) = f(b).
+<li>Por álgebra de continuas y derivables, g es continua en [a, b] y derivable en (a,b).
+<li>g(a) = f(a) − L(a) = f(a) − f(a) = 0
+<li>g(b) = f(b) − L(b) = f(b) − f(b) = 0
+<li>Por los dos puntos anteriores, g cumple las hipótesis del <a href="#teo8r">teorema de Rolle</a>.
+<li>Entonces Rolle nos dice que existe c ∈ (a, b) tal que g'(c) = 0.
+<li>Partiendo de la ecuación del primer punto, queremos ver que g'(c) = f'(c) − m.
+<ul>
+<li>La m sale de que las rectas como L tienen la pinta p + mx.
+<li>(L(x))' = (p + mx)' = (p)' + (mx)' = 0 + m(x)' = 0 + m = m
+</ul>
+<li>Como g'(c) = 0, entonces nos queda que f'(c) = m.
+<li>Pero m es la pendiente de la recta que une f(a) con f(b), por lo que m = (f(b) − f(a)) ⁄ (b − a).
+<li>Reemplazando nos queda que f'(c) = (f(b) − f(a)) ⁄ (b − a), que es lo que queríamos probar. □
+</ul>
+
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+
+<h3 id="teo8c">Teorema de <span class="c4">Cauchy</span></h3><br>
+<b>Sea:</b>
+<ul>
+<li>f continua en [a, b]
+<li>f derivable en (a, b)
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>Existe c ∈ (a, b) tal que (f(b) − f(a)) ⁄ f'(c) = (g(b) − g(a)) ⁄ g'(c).</b>
+<ul>
+<li><i>Este es un resultado técnico más que nada</i>.
+</ul>
+</ul>
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Consideremos la siguiente función:
+<br>h(x) = (f(x) − f(a))(g(b) − g(a)) − (g(x) − g(a))(f(b) − f(a)).
+<li>Podemos observar que h(a) = 0 trivialmente.
+<li>Podemos observar que h(b) = <span class="c1f">(f(b) − f(a))(g(b) − g(a))</span> − <span class="c2f">(g(b) − g(a))(f(b) − f(a))</span>, ambos términos son el mismo, así que h(b) = 0.
+<li>Por lo tanto, h cumple todas las hipótesis del <a href="#teo8r">teorema de Rolle</a>.
+<ul>
+<li>Nótese que las cualidades de continuidad y derivabilidad las adquiere por álgebra de derivables y continuas.
+</ul>
+<li>De esta forma, Rolle nos asegura que existe c ∈ (a, b) ⁄ h'(c) = 0.
+<li>Observemos ahora que h'(c) = f'(c)(g(b) − g(a)) − g'(c)(f(b) − f(a)).
+<li>Como h'(c) = 0, entonces tengo que f'(c)(g(b) − g(a)) = g'(c)(f(b) − f(a)).
+<li>Distribuyendo llego a que (f(b) − f(a)) ⁄ f'(c) = (g(b) − g(a)) ⁄ g'(c), que es a lo que queríamos llegar. □
+</ul>
+</div>
+
+<!-- indice titulo -->
+<!--<div class="area_subtitulo" style="background:#7f0f2f">
+Ads
+</div>-->
+<!-- Entry ads -->
+<!--<div class="area_entrada">
+<center>Sí, bueno, Ads para mantener el sitio corriendo. ¡Les agradecería si apagaran Adblock por un ratito! <span style="font-size:0.5em">Pero bueno, nadie los obliga a hacerlo.</span> <br><b>¡Ojo con hacerles click igual, que no están asociados conmigo ni nada y pueden llevarlos a cualquier parte!</b>
+<script type="text/javascript" src="//ylx-1.com/bnr.php?section=General&pub=341236&format=728x90&ga=g"></script>
+<noscript><a href="https://yllix.com/publishers/341236" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png" style="border:none;margin:0;padding:0;vertical-align:baseline;" /></a></noscript></center>
+</div>-->
+
+<!--C1 IMPLICA DIFERENCIABLE-->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo9" style="max-width:19em;">
+Teorema 9: C¹ ⇒ Diferenciable
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<center><img src="teo9.jpg" class="imgteo">
+<br><a href="teo9.jpg" target="_blank">(Abrir en grande en una pestaña nueva)</a>
+</center>
+<br><i style="font-size:0.8em">(Cortesía de Ezequiel Togno)</i>
+</div>
+
+
+
+<!-- TEOREMA DEL HESSIANO -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo10" style="max-width:21em;">
+Teorema 10: Teorema del Hessiano
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+Primero, un poco de introducción:
+<ul>
+<li>Los puntos donde el gradiente de f se anula son candidatos a extremos relativos, pero no tienen por qué serlo. Estos puntos se llaman "puntos críticos". Si uno de estos puntos es efectivamente un extremo, llamemos P al punto, se dice que P es un extremo "estricto" si f(P) &gt; f(X) ∀ X en un entorno de P. Nótese que la 'estrictitud' viene dada porque hablamos de &gt; y no de ≥.
+
+<li>Dicho eso, decimos también que P es un punto silla de f si dadas dos trayectorias α y β que tiendan a P, f(α) tiene un máximo en P y f(β) tiene un mínimo en P. En ambos casos, sin embargo, ∇f(P) = 0.
+</ul>
+<br>Con esto visto, vamos al teorema.
+</div>
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sean:</b>
+<ul>
+<li>A un conjunto abierto
+<li>f: A ⊆ ℝⁿ → ℝ
+<li>f de clase C³ en A
+<li>P ∈ A un punto de A tal que ∇f(P) = 0
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>Si el Hessiano de f en P, <i>Hf(P)</i>, es definido negativo, P es un máximo estricto de f.
+<li>Si Hf(P) es definido positivo, P es un mínimo estricto de f.
+<li>Si Hf(P) es indefinido, entonces P es un punto silla de f.
+</ul></b>
+</div>
+<!-- contenido del teorema -->
+<div class="area_entrada">
+Unas cosas más antes de seguir:
+<ul>
+<li>Que f sea de clase C³ implica que sus derivadas primeras, segundas y terceras son continuas.
+<li>El Hessiano es la matriz de las derivadas segundas de f.
+<ul>
+<li>Que sea definido positivo implica que los determinantes de sus menores pricipales son todos positivos.
+<li>Que sea definido negativo implica que los determinantes de sus menores principales son intercaladamente negativos y positivos, empezando por un negativo.
+</ul>
+</ul>
+</div>
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Demostración:</b>
+<br><b>(Casos de Hessiano definido)</b>
+<ul class="demo">
+<li>Supongamos que Hf(P) es definido positivo. El caso opuesto es análogo.
+<li>Entonces para un X suficientemente cercano a P puedo describir a f en base a su polinomio de Taylor en ℝⁿ. O sea, f(X) = f(P) + (1 ⁄ 2)&lt;Hf(P)(X − P), (X − P)> + R(X − P).
+<ul>
+<li>Nótese que el término del gradiente <i>−derivadas primeras de f(p)−</i> no aparece porque al ser un punto crítico es nulo.
+</ul>
+<li>Dividiendo y multiplicando por ‖X − P‖² nos queda que:
+<br>f(X) = f(P) + ‖X − P‖²<span class="c1f">[(1 ⁄ 2)&lt;Hf(P)((X − P) ⁄ ‖X − P‖), ((X − P) ⁄ ‖X − P‖)> + R(X−P) ⁄ ‖X − P‖²]</span>
+<ul>
+<li><i>Nota: lo que está en naranja lo usaremos varias veces dentro del teorema, es por eso que está destacado, pero es parte de la misma fórmula.</i>
+</ul>
+<li>Llamemos Qp(V) a &lt;(1 ⁄ 2)Hf(P)(V), V>.
+<ul>
+<li>Por propiedades del producto interno escalar, si ponemos el (1 ⁄ 2) afuera o adentro es indistinto. Ahora lo ponemos adentro para poder hacer un trucazo.
+<li>Haciendo esto, nuestra expresión anterior queda así:
+<br>f(X) = f(P) + ‖X − P‖²<span class="c1f">[&lt;(1 ⁄ 2)Hf(P)((X − P) ⁄ ‖X − P‖), ((X − P) ⁄ ‖X − P‖)> + R(X−P) ⁄ ‖X − P‖²]</span>
+<li>Ahora podemos reemplazar con Qp(V).
+</ul>
+<li>Nos queda entonces que:
+<br>f(X) = f(P) + ‖X − P‖²<span class="c1f">[Qp((X − P) ⁄ ‖X − P‖) + R(X − P) ⁄ ‖X − P‖²]</span>
+<ul>
+<li>Nótese que el vector (X − P) ⁄ ‖X − P‖ tiene la misma dirección que (X − P) pero es de norma unitaria <i>("está normalizado")</i>.
+</ul>
+<li>Sea S un conjunto compacto <i>−cerrado y acotado−</i> tal que S = {V ∈ ℝ ⁄ ‖V‖ = 1}.
+<ul>
+<li>Nótese que S es una esfera n-dimensional de radio 1 centrada en el origen.
+</ul>
+<li>Como Qp es una función continua definida de ℝⁿ → ℝ, entonces por el <a href="#teo4">teorema de Weierstrass</a> alcanza su mínimo en S.
+<ul>
+<li>Atención que no es su mínimo absoluto de todos los valores posibles de la función, sino que toca su mínimo dentro de los valores que alcanza en S.
+</ul>
+<li>Vamos a llamar a este mínimo "mp".
+<li>Como lo alcanza, entonces existe un versor Vp  tal que Qp(Vp) = mp.
+<li>Como Vp ≠ 0 ya que ‖Vp‖ = 1, por pertenecer a S, entonces vale que mp &gt; 0.
+<ul>
+<li>Esto es así porque Hf(p) es definido positivo, y esto hace que Qp(Vp) &gt; 0 al multiplicar.
+</ul>
+<li>Como este era el mínimo que alcanza Qp en la esfera, vale que Qp ≥ mp &gt; 0 para todo versor V.
+<li>Por lo tanto, el Qp((X−P) ⁄ ‖X−P‖) que teníamos en nuestro polinomio de Taylor va a ser siempre mayor a 0 <i>(recordemos que estamos consideando que Hf(P) es definido positivo)</i>.
+<li>Cuando X → P, (R(X − P) ⁄ ‖X − P‖²) → 0 porque la diferencia entre f(X) y f(P) se achica cada vez más.
+<ul>
+<li>Esto sucede porque el polinomio de Taylor centrado en P es cada vez más exacto conforme X → P.
+</ul>
+<li>Juntando los dos puntos anteriores tenemos que <span class="c1f">[(1 ⁄ 2)&lt;Hf(P)((X − P) ⁄ ‖X − P‖), ((X − P) ⁄ ‖X − P‖)> + R(X − P) ⁄ ‖X − P‖²]</span> es siempre positivo y mayor a 0
+<li>Por lo dicho arriba nos queda que f(X) = f(P) + ‖X − P‖²<span class="c1f">[término mayor a 0]</span>, por lo que f(X) es siempre f(P) más un poquito, lo que significa que f(P) &lt; f(X) para todo X en un
+entorno de P.
+<ul>
+<li>Nótese que ‖X − P‖ &gt; 0 porque X tiende a P pero no es igual a P.
+</ul>
+<li>El caso en el que Hf(P) es definido negativo y f(P) un máximo local es análogo.
+</ul>
+<br><b>(Caso de Hessiano indefinido)</b>
+<ul class="demo">
+<li>Si Hf(P) fuera indefinido, existirían dos trayectorias W y Z tales que Qp(W) &gt; 0 y Qp(Z)&lt;0.
+<li>A través de estas trayectorias f(X) es respectivamente mayor y menor a f(P), por lo que se deduce que P ha de ser un punto silla de f.
+</ul>
+Dicho todo esto, se demuestra el teorema. □
+</div>
+
+
+
+<!-- MULTIPLICADORES DE LAGRANGE -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo11" style="max-width:33em;">
+Teorema 11: Teorema de los multiplicadores de Lagrange
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+A decir verdad, no entendí nunca la demostración de este teorema. Tanto es así, que me pareció que sería inapropiado resumirla y explicarla acá sin estar seguro de mis palabras. Por esto mismo, anexo una imagen de la demostración del libro de Larotonda y me limito a continuar.
+<br><br><center><img src="teo11.png" class="imgteo">
+<br><a href="teo11.png" target="_blank">(Abrir en una pestaña nueva)</a></center>
+</div>
+
+
+
+<!--CONTINUA IMPLICA INTEGRABLE-->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo12" style="max-width:21em;">
+Teorema 12: Continua ⇒ Integrable
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+(<b>Nota</b>: en el primer renglón, donde dice <i>entonces es derivable en [a, b]</i>, debería decir <i>entonces es integrable en [a, b]</i>.)
+<br><br><center><img src="teo12.jpg" class="imgteo">
+<br><a href="teo12.jpg" target="_blank">(Abrir en grande en una pestaña nueva)</a></center>
+</div>
+
+
+
+<!--TEOREMA FUNDAMENTAL DEL CÁLCULO INTEGRAL-->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo13" style="max-width:31em;">
+Teorema 13: Teorema fundamental del cálculo integral
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<i>Nota: de acá en adelante, debido a las limitaciones de Gallemathic y html, voy a notar las integrales definidas de a hasta b de f(t)dt como ∫[a,b]f(t)dt.</i>
+<br><br><b>Sean:</b>
+<ul>
+<li>f:[a,b]→ℝ una función continua.
+<li>Dado x∈[a,b], sea F:[a,b]→ℝ tal que F(x) = ∫[a,x]f = ∫[a,x]f(t)dt.
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>F es continua en [a,b], derivable en (a,b) y ∀x∈[a,b] vale que F'(x)=f(x).
+</ul>
+
+<br><b>Demostración:</b>
+<br>Sea s el máximo valor que toma |f(t)| con t∈[a,b], que como f es una función continua es un número finito. Vamos a probar que F es una función continua.
+<ul>
+<li>Veamos primero que F es continua en los bordes. Como F(a)=∫[a,a]f, entonces F(a)=0. Como |F(x)−F(a)|=|∫[a,x]f|≤∫[a,x]|f|=infS(|f|,P) que es el ínfimo de las sumas superiores de |f|, sobre cualquier P partición del intervalo [a,x]. Esto significa que |F(x)−F(a)|≤S(|f|,P), donde S(|f|,P) es una suma superior de |f| en una partición P, que es igual a ∑[i]Mi∆i, donde Mi es el máximo de |f| en el intervalo ∆i (juntando todos los ∆i formo P), que es menor o igual a s∑[i]∆i, donde s, como habíamos dicho, era el máximo de |f| en [a,b].
+<br>Tenemos entonces que |F(x)−F(a)|≤s∑[i]∆i. Pero s∑[i]∆i=s(x−a), entonces quedamos en que |F(x)−F(a)|≤s(x−a). Cuando x→a⁺, s(x−a)→0, con lo cual F(x)→F(a).
+<br>Podemos hacer la misma analogía con el intervalo [x,b] hasta llegar a que |F(b)−F(x)|≤s(b−x). Como s(b−x)→0 cuando x→b⁻, entonces F(x)→F(b).
+<br>Con estas dos cosas probamos que F es continua en los bordes.</li>
+<li>Ahora vamos a probar que F es derivable, que F'=f y que F es continua en el interior del intervalo. Para esto tomamos un punto xo∈(a,b). Sea x∈(a,b) otro punto cualquiera, calculemos lo siguiente: (F(x)−F(xo))/(x−xo).
+<br>(F(x)−F(xo))/(x−xo) = (∫[a,x]f−∫[a,xo]f)/(x−xo)=(∫[xo,x]f)/(x−xo). Si eso tiende a f(xo) cuando x→xo, esto probaría que F es derivable, que F'=f y que F es continua en el interior.
+<br>Como f es continua entre x y xo, que eran puntos de [a,b], entonces existen dos números reales, el máximo y el mínimo de f entre x y xo tales que m≤f(t)≤M ∀t entre x y xo. No pongo [x,xo] o [xo,x] porque no sabemos cuál es el mayor.
+<br>Supongamos que x>xo, total el razonamiento inverso es análogo. Se tiene lógicamente que m(x−xo)≤∫[xo,x]f≤M(x−xo). Ahora, como x≠xo, trivial, y x>xo, se tiene que x−xo>0, por lo que puedo dividir todos los términos por (x−xo) y me queda que m≤(∫[xo,x]f) ⁄ (x−xo)≤M.
+<br>Ahora,como m y M eran dos números entre x y xo, cuando x→xo⁺, m y M tienden a f(xo), porque f es continua. Por lo tanto (∫[xo,x]f) ⁄ (x−xo)→f(xo).
+<br>Como (∫[xo,x]f) ⁄ (x−xo)=(F(x)−F(xo))/(x−xo), entonces (F(x)−F(xo))/(x−xo) = f(xo) cuando x→xo⁺. Al probar el caso xo>x se comprueba que lim x→xo (F(x)−F(xo))/(x−xo)=f(xo).</li></ul>
+<br>Como lim x→xo (F(x)−F(xo))/(x−xo)=f(xo), se prueba que F es continua en el interior, derivable en todo el interior (y por tanto, efectivamente derivable) y F'=f, que es lo que queríamos probar. □
+</div>
+
+
+
+<!-- REGLA DE BARROW -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo14" style="max-width:18em;">
+Teorema 14: Regla de Barrow
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sea:</b>
+<ul>
+<li>[a, b] cerrado
+<li>f continua en [a, b]
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>Si F es una primitiva de f, se tiene que ∫[a, b]f = F(b) − F(a).
+</ul>
+</b>
+
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Si F es la primitiva que detalla el Teorema Fundamental del Cálculo, o sea, F(x) = ∫[a, x]f, entonces es trivial que ∫[a, b]f = F(b) − F(a).
+<li>Si no es esa primitiva, y la primitiva es G, entonces como ambas primitivas varían, cuando mucho, en una constante, se tiene que G = F + c.
+<li>En consecuencia de lo anterior, G(b) − G(a) = F(b) + c − F(a) − c = F(b) − F(a) = ∫[a, b]f.
+<li>Juntando ambas cosas se tiene que para cualquier primitiva T de f, ∫[a, b]f = T(b) − T(a), que es lo que queríamos probar. □
+</ul>
+</div>
+
+
+
+<!-- TVMI -->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo15" style="max-width:27em;">
+Teorema 15: Teorema del valor medio integral
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Sea:</b>
+<ul>
+<li>f: [a, b] → ℝ una función continua.
+</ul>
+<br><b>Entonces:</b>
+<ul>
+<li>∃ c ∈ (a, b) ⁄ ∫[a, b]f = f(c)(b − a).
+</ul>
+</b>
+
+<br><b>Demostración:</b>
+<ul class="demo">
+<li>Para demostrar este teorema solo hace falta aplicar el teorema de Lagrange en una variable a la primitiva F, tal que F(x) = ∫[a,x]f, de f.
+<ul>
+<li>Es decir, F(b) = ∫[a,b]f = F(b)−F(a).
+</ul>
+<li>Por <a href="#teo8">Lagrange en una variable</a> se tiene que si F: [a, b] → ℝ es continua en [a, b] y diferenciable en (a, b), entonces existe c ∈ (a, b) tal que (F(b) − F(a)) ⁄ (b − a) = F'(c).
+<li>Si movemos un poco esto nos queda que F(b) − F(a) = F'(c)(b − a).
+<li>Volviendo a lo anterior tenemos que F(b) = ∫[a,b]f = F(b) − F(a) = F'(c)(b − a).
+<li>Sin embargo, como F'(c) = f(c), entonces nos queda que F(b) = f(c)(b − a).
+<li>Eso último lo podemos reescribir como ∫[a,b]f = f(c)(b−a), que es lo que queríamos probar. □
+</ul>
+</div>
+
+
+
+<!--GRADIENTE PERPENDICULAR A LA TANGENTE-->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo16" style="max-width:31em;">
+Teorema 16: Gradiente perpendicular a la tangente
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<b>Enunciado:</b> dado P en una curva de nivel de F(x, y) de clase C¹ tal que ∇F(P)≠0, entonces ∇F(P) es perpendicular a la recta tangente a la curva en P.
+<center><br><img src="teo16a.jpg" class="imgteo">
+<br><a href="teo16a.jpg" target="_blank">(Abrir en grande en una pestaña nueva)</a><br>
+<br><img src="teo16b.jpg" class="imgteo">
+<br><a href="teo16b.jpg" target="_blank">(Abrir en grande en una pestaña nueva)</a>
+<br><i style="font-size:0.8em">(Cortesía de Ezequiel Togno)</i></center>
+</div>
+
+
+
+<!--DERIVADAS CRUZADAS COINCIDEN-->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo17" style="max-width:27em;">
+Teorema 17: Las derivadas cruzadas coinciden
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+Dado que este teorema no se toma nunca y su demostración es brutalmente complicada, no voy a subirlo. Si se quiere ver por cuenta propia, está en la página 109 del Cálculo de Larotonda.
+</div>
+
+
+
+<!--LAGRANGE EN Rn-->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo18" style="max-width:24em;">
+Teorema 18: Teorema de Lagrange en ℝⁿ
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<center><img src="teo18.png" class="imgteo">
+<br><a href="teo18.png" target="_blank">(Abrir en una pestaña nueva)</a></center>
+</div>
+
+
+
+<!--Fermat EN Rn-->
+<!-- Back to top -->
+<div class="crucecita_cerrar" style="display:none">
+<a href = "#indice">Índice</a>
+</div>
+<!-- titulo -->
+<div class="area_subtitulo" id="teo19" style="max-width:23em;">
+Teorema 19: Teorema de Fermat en ℝⁿ
+</div>
+
+<!-- contenido del teorema -->
+<div class="area_entrada">
+<center><img src="teo19.png" class="imgteo">
+<br><a href="teo19.png" target="_blank">(Abrir en una pestaña nueva)</a>
+</div>
+
+<center style="color:white;"><br>Martín del Río, 2017 - 2018.
+<br><a href="../.." style="color:white;">Home</a></center><br>
+</div>
+</body>
+</html>
